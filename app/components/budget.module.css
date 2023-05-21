@@ -71,3 +71,7 @@
 .active {
   border: 2px solid var(--color-primary);
 }
+
+.activeRadio {
+  border: 7.5px solid var(--color-primary);
+}

@@ -5,7 +5,7 @@ import classes from "./budget.module.css";
 
 function Budget({ step, setStep, pageInfo, formData, setFormData }) {
   // getting the selected radio button
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(formData.budgetType);
 
   // handling the selection and updating the state to save the data
   function clickHandler(e) {
@@ -29,6 +29,8 @@ function Budget({ step, setStep, pageInfo, formData, setFormData }) {
         <form className={classes.form}>
           <label
             className={`${classes.label} ${
+              formData.budgetType === "type1" && classes.active //persising the active class outline border
+            } ${
               selectedOption === "type1" && classes.active // adding a class whenever this label is active()
             }`}
             htmlFor="type1"
@@ -36,7 +38,7 @@ function Budget({ step, setStep, pageInfo, formData, setFormData }) {
             <input
               type="radio"
               id="type1"
-              checked={selectedOption === "type1"} // checked state in function of the clicked option styled with :checked pseudoclass css
+              checked={selectedOption === "type1"}
               name="type1"
               onChange={(e) => clickHandler(e)}
               required
@@ -45,8 +47,8 @@ function Budget({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "type2" && classes.active
-            }`}
+              formData.budgetType === "type2" && classes.active //persising the active class outline border
+            } ${selectedOption === "type2" && classes.active}`}
             htmlFor="type2"
           >
             <input
@@ -60,8 +62,9 @@ function Budget({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "type3" && classes.active
-            }`}
+              formData.budgetType === "type3" && classes.active //persising the active class outline border
+            }
+             ${selectedOption === "type3" && classes.active}`}
             htmlFor="type3"
           >
             <input
@@ -75,8 +78,8 @@ function Budget({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "type4" && classes.active
-            }`}
+              formData.budgetType === "type4" && classes.active //persising the active class outline border
+            } ${selectedOption === "type4" && classes.active}`}
             htmlFor="type4"
           >
             <input

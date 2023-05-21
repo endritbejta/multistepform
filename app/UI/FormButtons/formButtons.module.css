@@ -44,15 +44,10 @@
   font-size: 18;
   font-family: inherit;
   cursor: pointer;
-  visibility: hidden;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .remove {
-  display: none;
+  visibility: hidden;
 }
 
 .show {

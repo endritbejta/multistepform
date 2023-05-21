@@ -11,12 +11,13 @@ import settings from "../UI/icons/settings.svg";
 import blog from "../UI/icons/blog.svg";
 
 function Services({ step, setStep, pageInfo, formData, setFormData }) {
-  const [selectedOption, setSelectedOption] = useState(null);
+  // state management for selected service
+  const [selectedOption, setSelectedOption] = useState(formData.serviceKind);
 
+  // handling the click, updating the data, setting the selectedOption
   function onClickHandler(e) {
     setFormData({ ...formData, serviceKind: e.target.value });
-
-    setSelectedOption(e.target.id);
+    setSelectedOption(e.target.value);
   }
 
   console.log(selectedOption);
@@ -32,17 +33,19 @@ function Services({ step, setStep, pageInfo, formData, setFormData }) {
         <form className={classes.form}>
           <label
             className={`${classes.label} ${
-              selectedOption === "development" ? classes.selected : ""
+              selectedOption === "Development" ? classes.selected : "" // classes that persist the change of steps
             }`}
             htmlFor="development"
-            // onClick={(e) =>
-            // setFormData({ ...formData, serviceKind: e.target.value })
-            // }
             onClick={(e) => onClickHandler(e)}
           >
             <div className={classes.description}>
               <span className={classes.icon}>
-                <Image src={development} width={40} height={40} />
+                <Image
+                  src={development}
+                  width={40}
+                  height={40}
+                  alt="developing screen"
+                />
               </span>
               Development
             </div>
@@ -56,14 +59,19 @@ function Services({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "webdesign" ? classes.selected : ""
+              selectedOption === "Web Design" ? classes.selected : ""
             }`}
             htmlFor="webdesign"
             onClick={(e) => onClickHandler(e)}
           >
             <div className={classes.description}>
               <span className={classes.icon}>
-                <Image src={blog} width={40} height={40} />
+                <Image
+                  src={blog}
+                  width={40}
+                  height={40}
+                  alt="webdesign monitor"
+                />
               </span>
               Web Design
             </div>
@@ -77,14 +85,19 @@ function Services({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "marketing" ? classes.selected : ""
+              selectedOption === "Marketing" ? classes.selected : ""
             }`}
             htmlFor="marketing"
             onClick={(e) => onClickHandler(e)}
           >
             <div className={classes.description}>
               <span className={classes.icon}>
-                <Image src={announcement} width={40} height={40} />
+                <Image
+                  src={announcement}
+                  width={40}
+                  height={40}
+                  alt="loudencer logo"
+                />
               </span>
               Marketing
             </div>
@@ -98,14 +111,19 @@ function Services({ step, setStep, pageInfo, formData, setFormData }) {
           </label>
           <label
             className={`${classes.label} ${
-              selectedOption === "other" ? classes.selected : ""
+              selectedOption === "Other" ? classes.selected : ""
             }`}
             htmlFor="other"
             onClick={(e) => onClickHandler(e)}
           >
             <div className={classes.description}>
               <div className={classes.icon}>
-                <Image src={settings} width={50} height={50} />
+                <Image
+                  src={settings}
+                  width={50}
+                  height={50}
+                  alt="setting logo"
+                />
               </div>
               Other
             </div>
