@@ -1,5 +1,8 @@
 import { useState } from "react";
+
 import classes from "./final.module.css";
+import tick from "../UI/icons/tick.svg";
+import Image from "next/image";
 
 function Final({ pageInfo, formData }) {
   // managing some state to mimic the data beeing send to one a server by deactivating submit button
@@ -30,7 +33,9 @@ function Final({ pageInfo, formData }) {
         <span className={classes.back2}></span>
         <span className={classes.back3}></span>
         <span className={classes.back4}></span>
-        <span className={classes.success}>&#10003;</span>
+        <span className={classes.success}>
+          <Image src={tick} width={70} height={70} />
+        </span>
       </div>
       <h1>{pageInfo.title}</h1>
       <p>{pageInfo.description}</p>
