@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #4a3aff;
+  --color-secondary: #d9dbe9;
+  --color-neutral-800: #170f49;
+  --color-neutral-700: #514f6e;
+  --color-neutral-600: #6f6c90;
+  --color-neutral-500: #a0a3bd;
+  --color-neutral-400: #d9dbe9;
+  --color-neutral-300: #eff0f6;
+  --color-neutral-200: #f7f7fb;
+  --color-neutral-100: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans";
+}
+
+h1 {
+  font-family: inherit;
+  color: var(--color-neutral-800);
+}

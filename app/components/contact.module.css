@@ -1,0 +1,127 @@
+.contact {
+  width: 596.13px;
+  height: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.alignment {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+}
+
+.alignmentEnvelope {
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  background-clip: red;
+}
+
+.contact h1 {
+  margin-bottom: 7.5px;
+}
+
+.contact p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-neutral-600);
+  margin-bottom: 39.13px;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-control label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--color-neutral-800);
+  margin-bottom: 20px;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid #4a3aff;
+  box-shadow: 0px 2px 11px rgba(69, 65, 164, 0.06),
+    0px 4px 10px rgba(31, 37, 89, 0.07);
+  cursor: pointer;
+  outline: none;
+}
+
+.input-control {
+  margin-bottom: 44px;
+  height: 66px;
+  width: 284px;
+  display: block;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eff0f7;
+  box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+  border-radius: 46px;
+  padding: 20px 21.61px;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.input:placeholder-shown {
+  color: var(--color-neutral-600);
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  outline: none;
+  color: var(--color-primary);
+}
+
+.input.input:-webkit-autofill {
+  background-color: transparent;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  /* border: 1px solid green; */
+  /* -webkit-text-fill-color: green; */
+  /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+  transition: background-color 5000s ease-in-out 0s;
+
+  border: 1px solid #eff0f7;
+  -webkit-box-shadow: 0 0 0px 1000px white inset,
+    0px 2px 6px rgba(19, 18, 66, 0.07);
+  -webkit-text-fill-color: var(--color-primary);
+  transition: none;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.error {
+  border: 1px solid red;
+}

@@ -1,0 +1,32 @@
+.app {
+  background-color: #fff;
+  width: 699.8px;
+  height: 869.2px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  color: var(--color-neutral-800);
+  /* font-size: 34px; */
+  line-height: 46px;
+  margin-bottom: 12px;
+  /* font-weight: 700; */
+  /* font-family: "DM Sans"; */
+}
+
+/* .app {
+  text-align: center;
+} */
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 42.59px;
+}
+
+.header p {
+  margin: 0 auto;
+  max-width: 556.41px;
+}
