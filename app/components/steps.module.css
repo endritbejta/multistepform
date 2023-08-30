@@ -32,11 +32,14 @@
   position: relative;
   background-color: var(--color-neutral-300);
   border-radius: 40px;
+  animation-fill-mode: forwards;
 }
 
 .primaryline {
   position: absolute;
   top: 0;
+  animation-fill-mode: forwards;
+
   left: 0;
   content: "";
   width: 0%;
@@ -61,4 +64,5 @@
   color: var(--color-neutral-100);
   transition: ease-in 0.1s;
   transition-delay: 0.2s;
+  animation-fill-mode: forwards;
 }
